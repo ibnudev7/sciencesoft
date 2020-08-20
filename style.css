@@ -1,0 +1,835 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Awal Navbar */
+/* adds some margin below the link sets  */
+
+.navbar .dropdown-menu div[class*="col"] {
+   margin-bottom:1rem;
+}
+
+.navbar .dropdown-menu {
+  border:none;
+  background-color: #fff;
+}
+
+/* breakpoint and up - mega dropdown styles */
+@media screen and (min-width: 992px) {
+  
+  /* remove the padding from the navbar so the dropdown hover state is not broken */
+.navbar {
+  padding-top:0px;
+  padding-bottom:0px;
+}
+
+.navbar-atas .bg-light{
+	background: #3770FD !important;
+}
+
+/* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+.navbar .nav-item {
+  padding:.5rem .5rem;
+  margin:0 -.5rem;
+}
+
+.navbar .nav-link{
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff !important;
+}
+
+/* makes the dropdown full width  */
+.navbar .dropdown {position:static;}
+
+.navbar .dropdown-menu {
+  width:100%;
+  left:0;
+  right:0;
+/*  height of nav-item  */
+  top:65px;
+  
+  display:block;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+  transition: 1s;
+  
+}
+  /* shows the dropdown menu on hover */
+.navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+  display:block;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+  
+  .navbar .dropdown-menu {
+    border: 1px solid rgba(0,0,0,.15);
+    background-color: #fff;
+  }
+
+}
+
+.navbar-atas .col{
+	margin-top: 30px;
+}
+
+.navbar-atas .dev h6{
+	font-weight: bold;
+}
+
+.navbar-atas .dev p{
+	font-size: 15px;
+}
+
+.navbar-atas .btn-outline-light{
+	border-radius: 0px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.navbar-atas .btn-outline-primary{
+	border-radius: 0px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+/* End Navbar */
+
+/* Awal Content */
+
+
+		/*Awal Section 1*/
+			#section-1 .container-fluid{
+				background-image   : url('img/bg1.jpg');
+				background-repeat  : no-repeat;
+				background-position: center;
+				margin-top         : 0px;
+			}
+
+			#section-1 .owl-carousel .card{
+				border-radius: 0px;
+				height: 70px;
+				border: none;
+			}
+
+			#section-1 .owl-carousel .card img{
+				width: 70%;
+				height: 70%;
+  				filter: grayscale(100%);
+			}
+
+			#section-1 .owl-carousel .card:hover img{
+				width: 70%;
+				height: 70%;
+  				filter: grayscale(0%);
+			}
+		/*End Section 1*/
+
+		/* Search */
+			@media (max-width: 550px) {
+				#section-search .search{
+					width: 100% !important;
+				}
+			}
+
+			#section-search .search{
+				width        : 80%;
+				margin       : auto;
+			}
+
+			.main {
+				width : 80%;
+				margin: 50px auto;
+			}
+
+			.search-h .form-control {
+				padding-left : 2.375rem;
+				height       : 50px;
+				border-radius: 100px;
+			}
+
+			.search-h .form-control-feedback {
+				position      : absolute;
+				z-index       : 2;
+				display       : block;
+				width         : 2.375rem;
+				height        : 2.375rem;
+				line-height   : 2.375rem;
+				text-align    : center;
+				pointer-events: none;
+				color         : #aaa;
+			}
+
+			.search-h .fa-search{
+				margin-top : 5px;
+				margin-left: 3px;
+				width      : 30px;
+				height     : 30px;
+			}
+		/* End Search */
+
+		/* Awal quotes */
+			.section-quotes hr{
+				border-bottom: 3px solid #ED8B00;
+				width        : 100px;
+			}
+
+			.section-quotes p{
+				font-size  : 20px;
+				font-family: arial;
+				color      : #f0f0f0;
+			}
+
+			.section-quotes h1{
+				color: #f0f0f0;
+			}
+
+			@media (max-width: 550px) {
+				.section-quotes h1{
+					font-size: 23px;
+				}
+			}
+		/* End quotes */
+
+		/* Awal Card */
+		#section-card-item{
+			margin-top: -70px;
+		}
+
+		#section-card-item img{
+			width     : 200px;
+			height    : 200px;
+			object-fit: cover;
+			margin    : auto;
+		}
+
+		#section-card-item .card{
+			border-radius: 0px;
+			border       : none;
+			box-shadow   : 0px 2px 10px rgba(224,224,224,.75);
+			padding      : 15px;
+			transition   : .5s;
+			margin-bottom: 20px;
+		}
+
+		#section-card-item .card:hover{
+			border-radius: 0px;
+			border       : none;
+			box-shadow   : 0px 2px 2px rgba(224,224,224,.75);
+			padding      : 15px;
+		}
+
+		#section-card-item .card-footer{
+			background: transparent;
+			border    : none;
+		}
+
+		#section-card-item .card p{
+			font-size: 20px;
+		}
+
+		#section-card-item .card-footer{
+			color: #426CFE;
+			background-color: #eeefff;
+		}
+
+		#section-card-item a{
+			text-decoration: none;
+		}
+
+		/* End Card */
+
+		/*Animations*/
+
+		[data-animate-in] {
+		    opacity: 0;
+		    transition: transform 0.8s ease, opacity 0.8s ease
+		}
+
+		[data-animate-in="up"] {
+		    transform: translate3d(0, 24px, 0)
+		}
+
+		[data-animate-in="left"] {
+		    transform: translate3d(-25%, 0, 0)
+		}
+
+		[data-animate-in="right"] {
+		    transform: translate3d(25%, 0, 0)
+		}
+
+		[data-animate-in="down"] {
+		    transform: translate3d(0, -24px, 0)
+		}
+
+		[data-animate-in="fadeIn"] {
+		    transform: translate3d(0, 0, 0)
+		}
+
+		[data-animate-in].in-view {
+		    opacity: 1;
+		    transform: translate3d(0, 0, 0);
+		    -webkit-transform: translate3d(0, 0, 0);
+		    transition: transform 0.6s ease, opacity 0.6s ease
+		}
+
+		.fade-in {
+		    opacity: 0;
+		    transition: opacity 1s ease
+		}
+
+		.page-loaded .fade-in,.page-loaded.fade-in {
+		    opacity: 1
+		}
+
+		.isSafari.isTouch [data-animate-in],.isSafari.isTouch [data-animate-in="up"] {
+		    opacity: 1;
+		    transition: none;
+		    transform: none
+		}
+		/* Animation FadeIn Out*/
+
+		/* Awal Navigation */
+		
+		#section-2 .card{
+			width: 30%;
+			background: #;
+		}
+
+		#section-2 .nav-pills a{
+			display: inline-block;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		/* End Navigation */
+		
+		#section-3{
+			margin-top: 30px;
+			background: #FAFAFA;
+		}
+
+		#section-3 .container h3{
+			font-weight: bold;
+			margin-top: 30px;
+		}
+
+		#section-3 .container .card{
+			margin-top: -30px;
+			box-shadow   : 0px 2px 10px rgba(224,224,224,.75);
+			margin-bottom: 80px;
+			border-radius: 0px;
+			border: none;
+		}
+
+		@media (max-width: 550px) {
+				#section-3 .container .card{
+					margin-top: 10px;
+					box-shadow   : 0px 2px 10px rgba(224,224,224,.75);
+					margin-bottom: 80px;
+					border-radius: 0px;
+					border: none;
+				}
+			}
+
+		#section-3 .container .card img{
+			width: 300px;
+			height: 300px;
+			object-fit: contain;
+			margin: auto;
+		}
+
+		#section-3 span{
+			color: #1D5FAB;
+			font-family: arial;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		#section-3 .text-muted{
+			color: #1D5FAB;
+			font-family: arial;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		#section-3 .btn{
+			border-radius: 0px;
+			margin-bottom: 30px;
+		}
+
+		#section-3 .btn a{
+			text-decoration: none;
+		}
+
+		#section-3 .btn:hover a{
+			text-decoration: none;
+			color: #fff;
+		}
+
+		#section-3 .quotes{
+			font-size  : 18px;
+			font-family: arial;
+			color      : #444;
+		}
+
+		/* End Section 3 */
+
+
+		/* Awal Section 4 */
+
+		#section-4{
+			margin-top: 30px;
+			background: #FAFAFA;
+		}
+
+		#section-4 .container h3{
+			font-weight: bold;
+			margin-top: 30px;
+		}
+
+		#section-4 .tab-pane .quotes{
+			font-size  : 20px;
+			font-family: arial;
+			color      : #444;
+			margin-top: 30px;
+		}
+
+		#section-4 #subb{
+			background: #fff;
+			box-shadow   : 0px 2px 10px rgba(204,204,204,.75);
+			margin-top: 30px;
+			padding: 50px;
+		}
+
+		#section-4 #subb a{
+			border-radius: 0px;
+			border: none;
+			outline: none;
+			background-color: transparent;
+		}
+
+		@media (max-width: 550px) {
+			#section-4 #subb a{
+				border-radius: 0px;
+				border: none;
+				outline: none;
+				background-color: transparent;
+				transform: scale(0);
+				color: lightblue;
+			}
+		}
+
+		#section-4 #subb .tab-content h5{
+			font-weight: bold;
+		}
+
+		#section-4 .tab-pane span{
+			color: #1D5FAB;
+			font-family: arial;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		#section-4 .tab-pane .text-muted{
+			font-size: 18px;
+		}
+
+		#section-4 .tab-pane .btn-outline-primary{
+			border-radius: 0px;
+			float: right;
+		}
+
+		#subb .nav-item img{
+			width: 50px;
+			height: 50px;
+			object-fit: contain;
+		}
+
+		#subb .nav-item a{
+			font-weight: bold;
+			font-size: 17px;
+		}
+
+
+		/* End Section 4 */
+
+		/* Awal Section 5 */
+		
+		#section-5{
+			background: #0B3155;
+			margin-top: 50px;
+			height: auto;
+		}
+		
+		#section-5 .container{
+			background: transparent;
+		}
+
+		#section-5 .container h3{
+			font-weight: bold;
+		}
+		
+		#section-5 .card{
+			margin-bottom: 50px;
+			height: 100px;
+			border-radius: 0px;
+			transition: .7s;
+		}
+
+		#section-5 .card:hover{
+			background: #005EB8;
+		}
+
+		#section-5 .card:hover .card-title{
+			color: #fff;
+			font-weight: bold;
+		}
+
+		#section-5 .card .card-title{
+			line-height: 100px;
+			color: #000;
+			font-weight: bold;
+		}
+
+		#section-5 .card .card-tittle{
+			margin-top: 20px;
+			color: #000;
+			font-weight: bold;
+		}
+
+		#section-5 .card:hover .card-tittle{
+			color: #fff;
+			font-weight: bold;
+		}
+
+		@media (max-width: 550px) {
+			#section-5 .card .card-tittle{
+				line-height: 100px;
+				margin-top: 0px;
+				color: #000;
+				font-weight: bold;
+			}
+		}
+
+		#section-5 .col-md-3 a{
+			text-decoration: none;
+		}
+
+		/* End Section 5 */
+
+		/* Awal Section 6 */
+
+		#section-6 .grayscale .card{
+			border-radius: 0px;
+			height: 70px;
+			border: none;
+		}
+
+		#section-6 .grayscale .card img{
+			width: 70%;
+			height: 70%;
+			filter: grayscale(100%);
+		}
+
+		#section-6 .grayscale .card:hover img{
+			width: 70%;
+			height: 70%;
+			filter: grayscale(0%);
+		}
+
+		#section-6 .divv h3{
+			font-weight: bold;
+			color: #000;
+			margin-top: 50px;
+		}
+
+		#section-6 .divv p{
+			font-size: 18px;
+		}
+
+		#section-6 .noGrayscale .card{
+			border-radius: 0px;
+			height: 70px;
+			border: none;
+		}
+
+		#section-6 .noGrayscale .card img{
+			width: 70%;
+			height: 70%;
+		}
+
+		/* End Section 6 */
+
+		/* Awal Section 7 */
+		#section-7{
+			margin-bottom: 80px;
+			background: #F9F9F9;
+		}
+
+		#section-7 .divv h3{
+			font-weight: bold;
+		}
+
+		#section-7 .divv{
+			margin-top: 30px;
+		}
+
+		#section-7 .card .text-muted{
+			color: #fff !important; 
+		}
+
+		#section-7 .card{
+			background: #F9F9F9;
+			background: url('img/bg2.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			margin-bottom: 30px;
+		}
+
+		#section-7 .col-md-5 .card{
+			border-radius: 0px;
+			border: none;
+			padding: 20px;
+			box-shadow   : 0px 2px 10px rgba(224,224,224,.75);
+			height: 325px;
+		}
+
+		#section-7 .blockquote-footer{
+			font-size: 14px;
+			font-weight: bold;
+			color: #fff !important;
+		}
+
+		#section-7 .col-md-7 .card{
+			border-radius: 0px;
+			border: none;
+			padding: 20px;
+			box-shadow   : 0px 2px 20px rgba(224,224,224,.75);
+			height: 325px;
+		}
+
+		#section-7 ul li{
+			list-style: none;
+			font-weight: bold;
+		}
+
+		#section-7 .col-md-6 .card{
+			border-radius: 0px;
+			border: none;
+			padding: 20px;
+			box-shadow   : 0px 2px 10px rgba(224,224,224,.75);
+			height: 325px;
+		}
+
+		#section-7 .col-md-3 .card{
+			border-radius: 0px;
+			border: none;
+			padding: 15px;
+			box-shadow   : 0px 2px 10px rgba(224,224,224,.75);
+			height: 325px;
+		}
+
+		#section-7 .btn-outline-primary{
+			border-radius: 0px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		/* End Section 7 */
+
+		/* Awal Section 8 */
+		#section-8 h3{
+			font-weight: bold;
+		}
+
+		#section-8 .divv p{
+			font-size: 18px;
+		}
+
+		#section-8 .card{
+			margin-bottom: 20px;
+			border: none;
+			border-radius: 0px;
+			box-shadow   : 0px 2px 7px rgba(224,224,224,.75);
+		}
+
+		#section-8 .card:hover{
+			margin-bottom: 20px;
+			border: none;
+			border-radius: 0px;
+			box-shadow   : 0px 2px 20px rgba(224,224,224,.75);
+		}
+
+		#section-8 .card p{
+			text-align: center;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		/* End Section 8 */
+
+		/* Awal Section 9 */
+
+
+		#section-9{
+			margin-top: 80px;
+		}
+
+		#section-9 h3{
+			font-weight: bold;
+		}
+
+		#section-9 .grayscale .card{
+			border-radius: 0px;
+			height: 70px;
+			border: none;
+		}
+
+		#section-9 .grayscale .card img{
+			width: 70%;
+			height: 70%;
+			filter: grayscale(100%);
+		}
+
+		#section-9 .grayscale .card:hover img{
+			width: 70%;
+			height: 70%;
+			filter: grayscale(0%);
+		}
+
+		#section-9 .container{
+			margin-bottom: 80px;
+		}
+
+
+
+		/* End Section 9 */
+
+		/* Awal Section 10 */
+		
+		#section-10{
+			background: #FAFAFA;
+		}
+
+		#section-10 .container{
+			margin-bottom: 80px;
+			margin-top: 30px;
+		}
+
+		#section-10 h3{
+			font-weight: bold;
+		}
+
+		#section-10 .card{
+			border: none;
+			border-radius: 0px;
+			box-shadow   : 0px 2px 20px rgba(224,224,224,.75);
+			padding: 15px;
+			margin-bottom: 30px;
+		}
+
+		#section-10 .card img{
+			width: 200px;
+			height: 200px;
+			object-fit: contain;
+			margin: auto;
+		}
+
+		#section-10 .card-deck span{
+			font-size: 15px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		#section-10 .card-deck h5{
+			font-weight: bold;
+		}
+
+		#section-10 .card-deck a{
+			float: right;
+		}
+
+		#section-10 .btn-outline-primary{
+			border-radius: 0px;
+		}
+		/* End Section 10 */
+
+		/*Awal Section 11*/
+
+		#section-11{
+			margin-top: 80px;
+		}
+
+		#section-11 h3{
+			font-weight: bold;
+		}
+
+		#section-11 p{
+			font-size: 18px;		
+		}
+
+		#section-11 .container{
+			margin-bottom: 80px;
+		}
+
+		#section-11 button{
+			font-size: 15px;
+			font-weight: bold;
+			border-radius: 0px;
+		}
+
+		#section-11 .col-md-3 p{
+			font-weight: bold;
+		}
+
+		#section-11 .col-md-3 button{
+			font-size: 15px;
+		}
+
+		/*End Section 11*/
+
+/* End Content */
+
+
+/* Awal Footer */
+#section-footer .container-fluid{
+	width: 100%;
+	height: 100%;
+	background: url('img/footer.jpg');
+	padding: 20px;
+	color: #fff;
+}
+
+#section-footer .container-fluid .iim img{
+	width: 25px;
+	height: 25px;
+}
+
+#section-footer .container-fluid .sosmed img{
+	width: 25px;
+	height: 25px;
+	margin-left: 10px;
+}
+
+#section-footer .container-fluid hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}
+
+#section-footer .container-fluid a{
+	text-decoration: none;
+	color: #fff;
+}
+
+#section-footer .container-fluid a:hover{
+	color: #fff;
+}
+/* End Footer */
